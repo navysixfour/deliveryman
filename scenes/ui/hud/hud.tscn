@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://boskhwto7dnj4"]
+
+[ext_resource type="PackedScene" uid="uid://c30yxnblxu053" path="res://scenes/ui/hud/money.tscn" id="1_xmswo"]
+
+[node name="Hud" type="Control" unique_id=2134910795]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=486719239]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer" unique_id=720921929]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+grow_horizontal = 0
+
+[node name="SceneMoney" parent="CanvasLayer/HBoxContainer" unique_id=323868344 instance=ExtResource("1_xmswo")]
+layout_mode = 2

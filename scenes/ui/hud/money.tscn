@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://c30yxnblxu053"]
+
+[ext_resource type="Script" uid="uid://drmkc0c1eepdy" path="res://scripts/ui/view/money_view.gd" id="1_p6hgx"]
+[ext_resource type="Script" uid="uid://bbavsh136gpy7" path="res://scripts/ui/system/money_ui_system.gd" id="1_y7lgi"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_t1fd0"]
+font_color = Color(0, 0.686638, 3.85046e-07, 1)
+
+[node name="MoneyUISys" type="Control" unique_id=323868344]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_y7lgi")
+
+[node name="MoneyView" type="Node" parent="." unique_id=612552055 node_paths=PackedStringArray("label")]
+script = ExtResource("1_p6hgx")
+label = NodePath("HBoxContainer/LabelMoney")
+metadata/_custom_type_script = "uid://drmkc0c1eepdy"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MoneyView" unique_id=956182227]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -79.0
+offset_bottom = 23.0
+grow_horizontal = 0
+
+[node name="LabelDollar" type="Label" parent="MoneyView/HBoxContainer" unique_id=901177835]
+layout_mode = 2
+text = "$"
+label_settings = SubResource("LabelSettings_t1fd0")
+
+[node name="LabelMoney" type="Label" parent="MoneyView/HBoxContainer" unique_id=1945942369]
+layout_mode = 2
+text = "1002121"
+label_settings = SubResource("LabelSettings_t1fd0")
