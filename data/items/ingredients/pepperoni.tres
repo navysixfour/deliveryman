@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InventoryItem" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/inventory_item.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+display_name = "Pepperoni"
+description = "Thinly sliced cured pepperoni. Crisps up perfectly in the oven."
+weight = 0.2
+max_stack = 10

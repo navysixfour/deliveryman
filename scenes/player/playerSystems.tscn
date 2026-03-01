@@ -1,9 +1,13 @@
 [gd_scene format=3 uid="uid://w6ubit0ul27y"]
 
 [ext_resource type="Script" uid="uid://crdshbjgohtiq" path="res://scripts/system/player/money_playersystem.gd" id="1_c8ovu"]
+[ext_resource type="Script" path="res://scripts/system/player/inventory_playersystem.gd" id="2_inv"]
 
 [node name="PlayerSystems" type="Node" unique_id=2094338322]
 
 [node name="MoneyPlayerSystem" type="Node" parent="." unique_id=1160086824]
 script = ExtResource("1_c8ovu")
 metadata/_custom_type_script = "uid://crdshbjgohtiq"
+
+[node name="InventoryPlayerSystem" type="Node" parent="."]
+script = ExtResource("2_inv")
