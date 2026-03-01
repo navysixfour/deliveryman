@@ -55,9 +55,14 @@ horizontal_alignment = 1
 layout_mode = 2
 text = "Resume"
 
+[node name="ButtonOptions" type="Button" parent="PauseView/Overlay/CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=412706775]
+layout_mode = 2
+text = "Options"
+
 [node name="ButtonQuit" type="Button" parent="PauseView/Overlay/CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1879003780]
 layout_mode = 2
 text = "Quit"
 
 [connection signal="pressed" from="PauseView/Overlay/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/ButtonResume" to="." method="_on_button_resume_pressed"]
+[connection signal="pressed" from="PauseView/Overlay/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/ButtonOptions" to="." method="_on_button_options_pressed"]
 [connection signal="pressed" from="PauseView/Overlay/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/ButtonQuit" to="." method="_on_button_quit_pressed"]

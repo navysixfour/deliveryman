@@ -1,16 +1,12 @@
-extends Control
-
-func _ready() -> void:
-	pass
-
-func _on_resume() -> void:
-	pass
-
-func _on_quit() -> void:
-	get_tree().quit()
+extends Node
 
 func _on_button_resume_pressed() -> void:
-	_on_resume()
+	WindowSystem.close_current()
+
+
+func _on_button_options_pressed() -> void:
+	WindowSystem.open(&"Options")
+
 
 func _on_button_quit_pressed() -> void:
-	_on_quit()
+	get_tree().quit()

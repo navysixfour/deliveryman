@@ -2,7 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://b8ufnmhb0uwpq" path="res://scenes/player/player.tscn" id="1_hyk8p"]
 [ext_resource type="PackedScene" uid="uid://boskhwto7dnj4" path="res://scenes/ui/hud/hud.tscn" id="2_iuonh"]
-[ext_resource type="PackedScene" path="res://scenes/ui/pause/pause.tscn" id="3_pause"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sky"]
 sky_horizon_color = Color(0.646, 0.662, 0.675, 1)
@@ -33,5 +32,3 @@ size = Vector3(5, 1, 5)
 transform = Transform3D(0.9993644, 0, -0.035649523, 0, 1, 0, 0.035649523, 0, 0.9993644, 0, 2.565724, 0)
 
 [node name="Hud" parent="." unique_id=2134910795 instance=ExtResource("2_iuonh")]
-
-[node name="Pause" parent="." instance=ExtResource("3_pause")]
