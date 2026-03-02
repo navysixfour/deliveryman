@@ -1,15 +1,16 @@
 [gd_scene format=3 uid="uid://cipmsdj8uh51o"]
 
 [ext_resource type="Script" uid="uid://5t4rrg3ww4e7" path="res://scripts/system/window_system.gd" id="1_g5wec"]
-[ext_resource type="PackedScene" uid="uid://bogkq06evgqnd" path="res://scenes/ui/pause/pause.tscn" id="2_unoiq"]
-[ext_resource type="PackedScene" uid="uid://cociqpecdvgld" path="res://scenes/ui/pause/options.tscn" id="3_qdiqo"]
-[ext_resource type="PackedScene" uid="uid://boskhwto7dnj4" path="res://scenes/ui/hud/hud.tscn" id="4_jh6ah"]
+[ext_resource type="Script" uid="uid://c01tchbv11ysm" path="res://scripts/resources/ui_window.gd" id="2_qdiqo"]
+[ext_resource type="Resource" uid="uid://boa0vlr4y2607" path="res://data/ui/windows/hud.tres" id="3_jh6ah"]
+[ext_resource type="Resource" uid="uid://v2rq48ytukx7" path="res://data/ui/windows/pause.tres" id="4_kjbwf"]
+[ext_resource type="Resource" uid="uid://co2814snj76lx" path="res://data/ui/windows/options.tres" id="5_2hx2l"]
 
 [node name="Node" type="Node" unique_id=1626740318]
 script = ExtResource("1_g5wec")
-windows = Dictionary[StringName, PackedScene]({
-&"Hud": ExtResource("4_jh6ah"),
-&"Options": ExtResource("3_qdiqo"),
-&"Pause": ExtResource("2_unoiq")
-})
 start_window = &"Hud"
+windows = Dictionary[StringName, ExtResource("2_qdiqo")]({
+&"Hud": ExtResource("3_jh6ah"),
+&"Options": ExtResource("5_2hx2l"),
+&"Pause": ExtResource("4_kjbwf")
+})
