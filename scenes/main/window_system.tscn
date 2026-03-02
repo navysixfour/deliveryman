@@ -3,10 +3,13 @@
 [ext_resource type="Script" uid="uid://5t4rrg3ww4e7" path="res://scripts/system/window_system.gd" id="1_g5wec"]
 [ext_resource type="PackedScene" uid="uid://bogkq06evgqnd" path="res://scenes/ui/pause/pause.tscn" id="2_unoiq"]
 [ext_resource type="PackedScene" uid="uid://cociqpecdvgld" path="res://scenes/ui/pause/options.tscn" id="3_qdiqo"]
+[ext_resource type="PackedScene" uid="uid://boskhwto7dnj4" path="res://scenes/ui/hud/hud.tscn" id="4_jh6ah"]
 
 [node name="Node" type="Node" unique_id=1626740318]
 script = ExtResource("1_g5wec")
 windows = Dictionary[StringName, PackedScene]({
+&"Hud": ExtResource("4_jh6ah"),
 &"Options": ExtResource("3_qdiqo"),
 &"Pause": ExtResource("2_unoiq")
 })
+start_window = &"Hud"

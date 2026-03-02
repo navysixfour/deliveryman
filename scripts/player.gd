@@ -13,16 +13,22 @@ var head_pitch: float = 0.0
 
 
 func _ready() -> void:
-	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	WindowSystem.open(WindowSystem.start_window)
 
 
 func _physics_process(delta: float) -> void:
 	var input_dir: Vector2 = Input.get_vector(
-		"move_left", "move_right", "move_forward", "move_back"
+		"move_left",
+		"move_right",
+		"move_forward",
+		"move_back",
 	)
-	var direction: Vector3 = (transform.basis * Vector3(input_dir.x, 0.0, input_dir.y)).normalized()
+	var direction: Vector3 = (
+		(transform.basis * Vector3(input_dir.x, 0.0, input_dir.y)).normalized()
+	)
 
 	var speed := sprint_speed if Input.is_action_pressed("sprint") else move_speed
+
 	if direction != Vector3.ZERO:
 		velocity.x = direction.x * speed
 		velocity.z = direction.z * speed
@@ -33,8 +39,6 @@ func _physics_process(delta: float) -> void:
 	if is_on_floor() and Input.is_action_just_pressed("jump"):
 		velocity.y = jump_velocity
 
-	velocity.x = move_toward(velocity.x, 0.0, move_speed)
-	velocity.z = move_toward(velocity.z, 0.0, move_speed)
 	velocity += get_gravity() * delta
 
 	move_and_slide()

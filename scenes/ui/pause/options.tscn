@@ -51,8 +51,6 @@ text = "OPTIONS"
 label_settings = SubResource("LabelSettings_title")
 horizontal_alignment = 1
 
-[node name="ButtonBack" type="Button" parent="OptionsView/Overlay/CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=412706775]
-layout_mode = 2
+[node name="ButtonBack" type="Button" parent="." unique_id=970305363]
+layout_mode = 0
 text = "Back"
-
-[connection signal="pressed" from="OptionsView/Overlay/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/ButtonBack" to="." method="_on_button_back_pressed"]
