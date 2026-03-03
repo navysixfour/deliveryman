@@ -14,10 +14,9 @@ var input_dir: Vector2 = Vector2.ZERO
 var is_sprinting: bool = false
 var jump_requested: bool = false
 
-
+# todo: move
 func _ready() -> void:
-	WindowSystem.open(WindowSystem.start_window)
-
+	WindowSystem.open(&"Hud")
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:

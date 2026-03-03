@@ -1,13 +1,12 @@
 extends Node
 
-@export var start_window: StringName = ""
-@export var windows: Dictionary[StringName, UIWindow] = {}
+@export var config: WindowsConfig
 
-var _stack: Array[UIWindow] = []
+var _stack: Array[WindowConfig] = []
 
 
 func open(window_name: StringName) -> void:
-	var ui_window := windows.get(window_name) as UIWindow
+	var ui_window := config.windows.get(window_name) as WindowConfig
 	if not ui_window:
 		push_warning("WindowSystem: no window registered for '%s'" % window_name)
 		return
@@ -31,7 +30,7 @@ func close_current() -> void:
 		return
 
 	_stack.pop_back()
-	var top := get_child(get_child_count() - 1)
+	var top = get_child(get_child_count() - 1)
 	top.queue_free()
 
 	if _stack.is_empty():
@@ -40,7 +39,7 @@ func close_current() -> void:
 		_apply_cursor(_stack.back())
 
 
-func _apply_cursor(ui_window: UIWindow) -> void:
+func _apply_cursor(ui_window: WindowConfig) -> void:
 	if ui_window.hide_cursor:
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	else:

@@ -1,16 +1,8 @@
 [gd_scene format=3 uid="uid://cipmsdj8uh51o"]
 
 [ext_resource type="Script" uid="uid://5t4rrg3ww4e7" path="res://scripts/system/window_system.gd" id="1_g5wec"]
-[ext_resource type="Script" uid="uid://c01tchbv11ysm" path="res://scripts/resources/ui_window.gd" id="2_qdiqo"]
-[ext_resource type="Resource" uid="uid://boa0vlr4y2607" path="res://data/ui/windows/hud.tres" id="3_jh6ah"]
-[ext_resource type="Resource" uid="uid://v2rq48ytukx7" path="res://data/ui/windows/pause.tres" id="4_kjbwf"]
-[ext_resource type="Resource" uid="uid://co2814snj76lx" path="res://data/ui/windows/options.tres" id="5_2hx2l"]
+[ext_resource type="Resource" uid="uid://dhodb6ougmwxx" path="res://data/ui/windows_config.tres" id="2_config"]
 
 [node name="Node" type="Node" unique_id=1626740318]
 script = ExtResource("1_g5wec")
-start_window = &"Hud"
-windows = Dictionary[StringName, ExtResource("2_qdiqo")]({
-&"Hud": ExtResource("3_jh6ah"),
-&"Options": ExtResource("5_2hx2l"),
-&"Pause": ExtResource("4_kjbwf")
-})
+config = ExtResource("2_config")

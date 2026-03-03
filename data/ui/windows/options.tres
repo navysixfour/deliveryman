@@ -1,10 +1,9 @@
-[gd_resource type="Resource" script_class="UIWindow" format=3 uid="uid://co2814snj76lx"]
+[gd_resource type="Resource" script_class="WindowConfig" format=3]
 
-[ext_resource type="PackedScene" uid="uid://cociqpecdvgld" path="res://scenes/ui/pause/options.tscn" id="1_8y6pu"]
-[ext_resource type="Script" uid="uid://c01tchbv11ysm" path="res://scripts/resources/ui_window.gd" id="2_t5ehu"]
+[ext_resource type="Script" path="res://scripts/resources/window_config.gd" id="1_script"]
+[ext_resource type="PackedScene" uid="uid://cociqpecdvgld" path="res://scenes/ui/pause/options.tscn" id="2_scene"]
 
 [resource]
-script = ExtResource("2_t5ehu")
+script = ExtResource("1_script")
 display_name = "Options"
-scene = ExtResource("1_8y6pu")
-metadata/_custom_type_script = "uid://c01tchbv11ysm"
+scene = ExtResource("2_scene")

@@ -12,7 +12,7 @@ func _ready() -> void:
 func _exit_tree() -> void:
 	_on_disable()
 
-
+	
 func _on_enable() -> void:
 	_update_money(Documents.player.money)
 	PlayerSystems.money.money_changed.connect(_update_money)
