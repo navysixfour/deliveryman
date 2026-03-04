@@ -1,12 +1,8 @@
 extends WindowUIContext
 
-var _view: Node
-
-
 func _ready() -> void:
-	_view = get_child(0)
 	var inv := Documents.player.inventory
-	_view.build_grid(inv.capacity)
+	view.build_grid(inv.capacity)
 	_refresh()
 	PlayerSystems.inventory.item_added.connect(_on_inventory_changed)
 	PlayerSystems.inventory.item_removed.connect(_on_inventory_changed)
@@ -24,4 +20,4 @@ func _on_inventory_changed(_item: InventoryItem, _count: int) -> void:
 
 func _refresh() -> void:
 	var inv := Documents.player.inventory
-	_view.update_slots(inv.slots, inv.capacity)
+	view.update_slots(inv.slots, inv.capacity)

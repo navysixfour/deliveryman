@@ -1,10 +1,7 @@
-extends Node
-var _view: MoneyView
-
+extends UIContext
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	_view = get_child(0)
 	_on_enable()
 
 
@@ -22,4 +19,4 @@ func _on_disable() -> void:
 
 
 func _update_money(value: int) -> void:
-	_view.set_money(value)
+	view.set_money(value)

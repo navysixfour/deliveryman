@@ -1,8 +1,8 @@
-[gd_scene load_steps=6 format=3]
+[gd_scene format=3]
 
-[ext_resource type="Script" path="res://scripts/ui/system/inventory_ui_context.gd" id="1_sys"]
+[ext_resource type="Script" uid="uid://bk3do1ouavvfl" path="res://scripts/ui/context/inventory_ui_context.gd" id="1_sys"]
 [ext_resource type="Script" path="res://scripts/ui/view/inventory_view.gd" id="2_view"]
-[ext_resource type="PackedScene" path="res://scenes/ui/inventory/inventory_slot.tscn" id="3_slot"]
+[ext_resource type="PackedScene" uid="uid://7h7s5rs2bam2" path="res://scenes/ui/inventory/inventory_slot.tscn" id="3_slot"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_title"]
 font_size = 24
