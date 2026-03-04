@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://c30yxnblxu053"]
 
 [ext_resource type="Script" uid="uid://drmkc0c1eepdy" path="res://scripts/ui/view/money_view.gd" id="1_p6hgx"]
-[ext_resource type="Script" uid="uid://bbavsh136gpy7" path="res://scripts/ui/system/money_ui_system.gd" id="1_y7lgi"]
+[ext_resource type="Script" uid="uid://bbavsh136gpy7" path="res://scripts/ui/system/money_ui_context.gd" id="1_y7lgi"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_t1fd0"]
 font_color = Color(0, 0.686638, 3.85046e-07, 1)
 
-[node name="MoneyUISys" type="Control" unique_id=323868344]
+[node name="MoneyUICtx" type="Control" unique_id=323868344]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_y7lgi")

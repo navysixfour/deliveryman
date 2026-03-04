@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="InventoryItem" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/inventory_item.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/ui/broccoli.png" id="2"]
+
+[resource]
+script = ExtResource("1")
+description = "Fresh broccoli florets. Packed with nutrients."
+icon = ExtResource("2")
+weight = 0.3
+max_stack = 10

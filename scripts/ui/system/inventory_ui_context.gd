@@ -1,4 +1,4 @@
-extends WindowUISystem
+extends WindowUIContext
 
 var _view: Node
 

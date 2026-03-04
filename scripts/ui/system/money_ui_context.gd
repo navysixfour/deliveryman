@@ -1,5 +1,4 @@
 extends Node
-
 var _view: MoneyView
 
 

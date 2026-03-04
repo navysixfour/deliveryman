@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3]
 
-[ext_resource type="Script" path="res://scripts/ui/system/inventory_ui_system.gd" id="1_sys"]
+[ext_resource type="Script" path="res://scripts/ui/system/inventory_ui_context.gd" id="1_sys"]
 [ext_resource type="Script" path="res://scripts/ui/view/inventory_view.gd" id="2_view"]
 [ext_resource type="PackedScene" path="res://scenes/ui/inventory/inventory_slot.tscn" id="3_slot"]
 
@@ -19,7 +19,7 @@ corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
-[node name="InventoryUISys" type="Control"]
+[node name="InventoryUICtx" type="Control"]
 process_mode = 3
 layout_mode = 3
 anchors_preset = 0

@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://cociqpecdvgld"]
 
-[ext_resource type="Script" uid="uid://coymftovuow25" path="res://scripts/ui/system/options_ui_system.gd" id="1_1epjk"]
+[ext_resource type="Script" uid="uid://coymftovuow25" path="res://scripts/ui/system/options_ui_context.gd" id="1_1epjk"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_title"]
 font_size = 32
 
-[node name="OptionsUISys" type="Control" unique_id=1448088862]
+[node name="OptionsUICtx" type="Control" unique_id=1448088862]
 process_mode = 3
 layout_mode = 3
 anchors_preset = 0

@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://bogkq06evgqnd"]
 
-[ext_resource type="Script" uid="uid://h47do44vt1fh" path="res://scripts/ui/system/pause_ui_system.gd" id="1_sys"]
+[ext_resource type="Script" uid="uid://h47do44vt1fh" path="res://scripts/ui/system/pause_ui_context.gd" id="1_sys"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_title"]
 font_size = 32
 
-[node name="PauseUISys" type="Control" unique_id=1448088862]
+[node name="PauseUICtx" type="Control" unique_id=1448088862]
 process_mode = 3
 layout_mode = 3
 anchors_preset = 0

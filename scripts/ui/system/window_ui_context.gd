@@ -1,6 +1,5 @@
 extends Node
-class_name WindowUISystem
-
+class_name WindowUIContext
 
 func _input(_event: InputEvent) -> void:
 	get_viewport().set_input_as_handled()

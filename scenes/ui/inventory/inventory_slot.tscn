@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://7h7s5rs2bam2"]
+[gd_scene load_steps=2 format=3 uid="uid://7h7s5rs2bam2"]
+
+[ext_resource type="Script" path="res://scripts/ui/view/inventory/inventory_slot_view.gd" id="1_view"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_slot"]
 bg_color = Color(0.15, 0.15, 0.15, 0.9)
@@ -18,9 +20,12 @@ font_color = Color(1, 1, 1, 0.9)
 outline_size = 2
 outline_color = Color(0, 0, 0, 1)
 
-[node name="Slot" type="PanelContainer" unique_id=738594229]
+[node name="Slot" type="PanelContainer" unique_id=738594229 node_paths=PackedStringArray("icon_rect", "count_label")]
 custom_minimum_size = Vector2(64, 64)
 theme_override_styles/panel = SubResource("StyleBoxFlat_slot")
+script = ExtResource("1_view")
+icon_rect = NodePath("Icon")
+count_label = NodePath("Count")
 
 [node name="Icon" type="TextureRect" parent="." unique_id=1904460337]
 layout_mode = 2

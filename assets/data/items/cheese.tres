@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="InventoryItem" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/inventory_item.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/ui/cheese.png" id="2"]
+
+[resource]
+script = ExtResource("1")
+description = "A wedge of aged cheese. Rich and savory."
+icon = ExtResource("2")
+weight = 0.25
+max_stack = 10
