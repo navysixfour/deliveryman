@@ -1,5 +1,6 @@
 extends PanelContainer
 
+class_name InventorySlotView
 @export var icon_rect: TextureRect
 @export var count_label: Label
 

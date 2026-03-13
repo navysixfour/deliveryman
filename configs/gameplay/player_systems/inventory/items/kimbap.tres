@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="InventoryItem" format=3]
+
+[ext_resource type="Script" uid="uid://cy827nphxmsgk" path="res://scripts/resources/gameplay/player_systems/inventory/inventory_item.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://b0rfmg37nhqbb" path="res://art/ui/inventory/kimbap.png" id="2"]
+
+[resource]
+script = ExtResource("1")
+description = "Korean rice roll filled with vegetables and meat. A satisfying meal."
+icon = ExtResource("2")
+weight = 0.4
+max_stack = 5

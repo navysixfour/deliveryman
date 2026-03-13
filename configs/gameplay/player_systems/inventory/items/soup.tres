@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="InventoryItem" format=3]
+
+[ext_resource type="Script" uid="uid://cy827nphxmsgk" path="res://scripts/resources/gameplay/player_systems/inventory/inventory_item.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://bq8lo4y0okiy3" path="res://art/ui/inventory/soup.png" id="2"]
+
+[resource]
+script = ExtResource("1")
+description = "A warm bowl of soup. Deliver carefully to avoid spills."
+icon = ExtResource("2")
+weight = 0.6
+max_stack = 3

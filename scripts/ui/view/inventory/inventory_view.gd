@@ -1,9 +1,11 @@
 extends Node
 
+class_name InventoryView
+
 @export var grid: GridContainer
 @export var slot_scene: PackedScene
 
-var _slot_views: Array = []
+var _slot_views: Array[InventorySlotView] = []
 
 
 func build_grid(capacity: int) -> void:

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="InventoryItem" format=3]
+
+[ext_resource type="Script" uid="uid://cy827nphxmsgk" path="res://scripts/resources/gameplay/player_systems/inventory/inventory_item.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://c6oqkutmpp3fc" path="res://art/ui/inventory/chilli_pepper.png" id="2"]
+
+[resource]
+script = ExtResource("1")
+description = "A fiery chilli pepper. Handle with care."
+icon = ExtResource("2")
+weight = 0.05
+max_stack = 20

@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="MoneyConfig" format=3 uid="uid://c1nkd6ltq88vm"]
+
+[ext_resource type="Script" uid="uid://c8iifj0lcj4wu" path="res://scripts/resources/gameplay/player_systems/money_config.gd" id="1_6gg45"]
+
+[resource]
+script = ExtResource("1_6gg45")
+starting_money = 100
+metadata/_custom_type_script = "uid://c8iifj0lcj4wu"

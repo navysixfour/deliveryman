@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="WindowsConfig" format=3 uid="uid://dhodb6ougmwxx"]
+
+[ext_resource type="Script" uid="uid://u2ea0gkvgg" path="res://scripts/resources/ui/windows_config.gd" id="1_script"]
+[ext_resource type="Script" uid="uid://qst46l0y231v" path="res://scripts/resources/ui/window_config.gd" id="2_wc"]
+[ext_resource type="Resource" uid="uid://bob3ghynovptq" path="res://configs/ui/windows/hud.tres" id="3_hud"]
+[ext_resource type="Resource" path="res://configs/ui/windows/inventory.tres" id="4_inv"]
+[ext_resource type="Resource" path="res://configs/ui/windows/options.tres" id="5_opt"]
+[ext_resource type="Resource" path="res://configs/ui/windows/pause.tres" id="6_pause"]
+
+[resource]
+script = ExtResource("1_script")
+start_window = &"Hud"
+windows = Dictionary[StringName, ExtResource("2_wc")]({
+&"Hud": ExtResource("3_hud"),
+&"Inventory": ExtResource("4_inv"),
+&"Options": ExtResource("5_opt"),
+&"Pause": ExtResource("6_pause")
+})

@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://b2yk7xmq4n3wp"]
 
 [ext_resource type="PackedScene" uid="uid://b8ufnmhb0uwpq" path="res://scenes/player/player.tscn" id="1_hyk8p"]
+[ext_resource type="Script" uid="uid://ctdbh8ftchkq4" path="res://scripts/ui/ui_container.gd" id="1_iuonh"]
+[ext_resource type="Script" uid="uid://g0lfgnyjpi86" path="res://scripts/scene.gd" id="1_k2fmo"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sky"]
 sky_horizon_color = Color(0.646, 0.662, 0.675, 1)
@@ -14,18 +16,25 @@ background_mode = 2
 sky = SubResource("Sky_env")
 
 [node name="Main" type="Node3D" unique_id=61233599]
+script = ExtResource("1_k2fmo")
+window_to_open = "Hud"
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2145932962]
+[node name="LevelContainer" type="Node" parent="." unique_id=370987507]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="LevelContainer" unique_id=2145932962]
 environment = SubResource("Environment_main")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=2132910025]
-transform = Transform3D(0.866025, -0.353553, 0.353553, 0, 0.707107, 0.707107, -0.5, -0.612372, 0.612372, 0, 10, 5)
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="LevelContainer" unique_id=2132910025]
+transform = Transform3D(0.8660253, -0.35355338, 0.3535538, 0, 0.70710725, 0.7071064, -0.50000024, -0.612372, 0.6123727, 0, 10, 5)
 shadow_enabled = true
 
-[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1942040474]
+[node name="CSGBox3D" type="CSGBox3D" parent="LevelContainer" unique_id=1942040474]
 transform = Transform3D(3.0508018, 0, 0, 0, 1, 0, 0, 0, 3.1186671, 0.1387236, -0.20613104, 0)
 use_collision = true
 size = Vector3(5, 1, 5)
 
-[node name="Player" parent="." unique_id=532408100 instance=ExtResource("1_hyk8p")]
+[node name="PlayerContainer" parent="." unique_id=532408100 instance=ExtResource("1_hyk8p")]
 transform = Transform3D(0.9993644, 0, -0.035649523, 0, 1, 0, 0.035649523, 0, 0.9993644, 0, 2.565724, 0)
+
+[node name="UIContainer" type="Node" parent="." unique_id=36772347]
+script = ExtResource("1_iuonh")

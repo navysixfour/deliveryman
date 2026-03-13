@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://cipmsdj8uh51o"]
 
-[ext_resource type="Script" uid="uid://5t4rrg3ww4e7" path="res://scripts/system/window_system.gd" id="1_g5wec"]
-[ext_resource type="Resource" uid="uid://dhodb6ougmwxx" path="res://data/ui/windows_config.tres" id="2_config"]
+[ext_resource type="Script" uid="uid://5t4rrg3ww4e7" path="res://scripts/globals/window_system.gd" id="1_g5wec"]
+[ext_resource type="Resource" uid="uid://dhodb6ougmwxx" path="res://configs/ui/windows_config.tres" id="2_config"]
+[ext_resource type="PackedScene" uid="uid://ocljbwrlfh6n" path="res://scenes/ui/window_background.tscn" id="3_qdiqo"]
 
 [node name="Node" type="Node" unique_id=1626740318]
 script = ExtResource("1_g5wec")
 config = ExtResource("2_config")
+window_background = ExtResource("3_qdiqo")

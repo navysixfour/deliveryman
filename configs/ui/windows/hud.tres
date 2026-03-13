@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="WindowConfig" format=3 uid="uid://bob3ghynovptq"]
+
+[ext_resource type="Script" uid="uid://qst46l0y231v" path="res://scripts/resources/ui/window_config.gd" id="2_7ivks"]
+[ext_resource type="PackedScene" uid="uid://boskhwto7dnj4" path="res://scenes/ui/hud/hud.tscn" id="2_scene"]
+
+[resource]
+script = ExtResource("2_7ivks")
+display_name = "Hud"
+scene = ExtResource("2_scene")
+show_cursor = false
+show_background = false

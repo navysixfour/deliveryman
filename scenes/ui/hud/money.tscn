@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c30yxnblxu053"]
 
 [ext_resource type="Script" uid="uid://drmkc0c1eepdy" path="res://scripts/ui/view/money_view.gd" id="1_p6hgx"]
-[ext_resource type="Script" uid="uid://bbavsh136gpy7" path="res://scripts/ui/context/money_ui_context.gd" id="1_y7lgi"]
+[ext_resource type="Script" uid="uid://bbavsh136gpy7" path="res://scripts/ui/context/hud/money_ui_context.gd" id="1_y7lgi"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_t1fd0"]
 font_color = Color(0, 0.686638, 3.85046e-07, 1)

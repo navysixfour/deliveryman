@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://boskhwto7dnj4"]
 
-[ext_resource type="Script" path="res://scripts/ui/system/hud_ui_system.gd" id="1_qao66"]
+[ext_resource type="Script" uid="uid://c8ee5wykaklsx" path="res://scripts/ui/context/hud/hud_ui_context.gd" id="1_qao66"]
 [ext_resource type="PackedScene" uid="uid://c30yxnblxu053" path="res://scenes/ui/hud/money.tscn" id="1_xmswo"]
 
 [node name="HudUICtx" type="Control" unique_id=2134910795]

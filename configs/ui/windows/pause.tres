@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="WindowConfig" format=3]
+
+[ext_resource type="Script" uid="uid://qst46l0y231v" path="res://scripts/resources/ui/window_config.gd" id="1_script"]
+[ext_resource type="PackedScene" uid="uid://bogkq06evgqnd" path="res://scenes/ui/pause/pause.tscn" id="2_scene"]
+
+[resource]
+script = ExtResource("1_script")
+display_name = "Pause"
+scene = ExtResource("2_scene")
