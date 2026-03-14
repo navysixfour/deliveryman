@@ -3,7 +3,7 @@ class_name FullscreenUIContext
 extends UIContext
 
 func _on_enter_context(view: Node) -> void:
-	get_tree().call_group("player_systems", "cancel_input")
+	get_tree().call_group(Groups.PLAYER_SYSTEMS, "cancel_input")
 
 
 func _try_handle_input(event: InputEvent) -> bool:
