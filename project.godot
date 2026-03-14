@@ -17,8 +17,8 @@ config/features=PackedStringArray("4.6", "C#")
 [autoload]
 
 Documents="*uid://bbcbb8o2n8oan"
-PlayerSystems="*uid://dyo8t3pllc3q8"
 WindowSystem="*uid://cipmsdj8uh51o"
+World="*uid://btao3xwwuh2ql"
 
 [dotnet]
 

@@ -1,3 +1,3 @@
 class_name Groups
 
-const PLAYER_SYSTEMS: String = "player_systems"
+const PLAYER_COMPONENTS: String = "player_components"

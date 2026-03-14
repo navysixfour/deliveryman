@@ -1,6 +1,6 @@
-extends PlayerSystem
+extends CharacterComponent
 
-class_name InventoryPlayerSystem
+class_name InventoryComponent
 
 signal item_added(item: InventoryItem, count: int)
 signal item_removed(item: InventoryItem, count: int)
@@ -13,7 +13,6 @@ var capacity: int
 func _ready() -> void:
 	super._ready()
 	capacity = config.capacity
-	PlayerSystems.inventory = self
 
 
 func add_item(item: InventoryItem, count: int = 1) -> int:

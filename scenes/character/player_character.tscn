@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://b8ufnmhb0uwpq"]
+
+[ext_resource type="Script" uid="uid://dgg2spurhfiip" path="res://scripts/gameplay/character/player_character.gd" id="1_75vfm"]
+[ext_resource type="Script" uid="uid://dg0l7ersxn53m" path="res://scripts/gameplay/character/components/inventory_component.gd" id="2_gmlin"]
+[ext_resource type="Script" uid="uid://crdshbjgohtiq" path="res://scripts/gameplay/character/components/money_component.gd" id="3_lvxji"]
+[ext_resource type="Script" uid="uid://cxd04igqacoml" path="res://scripts/gameplay/character/components/movement_component.gd" id="4_lvxji"]
+[ext_resource type="Resource" uid="uid://dd3xokuwbijxp" path="res://configs/gameplay/player/components/inventory/inventory_general.tres" id="4_p47bc"]
+[ext_resource type="Resource" uid="uid://c1nkd6ltq88vm" path="res://configs/gameplay/player/components/money_config.tres" id="6_75vfm"]
+[ext_resource type="Script" uid="uid://hbolmrqk40ht" path="res://scripts/gameplay/character/components/interaction_component.gd" id="7_qehiu"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_uoot0"]
+radius = 0.4
+height = 1.6
+
+[node name="PlayerCharacter" type="CharacterBody3D" unique_id=532408100 node_paths=PackedStringArray("money", "movement", "inventory", "interactions")]
+script = ExtResource("1_75vfm")
+money = NodePath("Components/Money")
+movement = NodePath("Components/Movement")
+inventory = NodePath("Components/Inventory")
+interactions = NodePath("Components/Interactions")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=980594458]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+shape = SubResource("CapsuleShape3D_uoot0")
+
+[node name="Head" type="Node3D" parent="." unique_id=160840776]
+metadata/_edit_lock_ = true
+
+[node name="Camera3D" type="Camera3D" parent="Head" unique_id=1965130302]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
+current = true
+
+[node name="Components" type="Node" parent="." unique_id=321284178]
+
+[node name="Movement" type="Node" parent="Components" unique_id=1374352052 node_paths=PackedStringArray("head", "camera", "player")]
+script = ExtResource("4_lvxji")
+head = NodePath("../../Head")
+camera = NodePath("../../Head/Camera3D")
+player = NodePath("../..")
+
+[node name="Inventory" type="Node" parent="Components" unique_id=410843762]
+script = ExtResource("2_gmlin")
+config = ExtResource("4_p47bc")
+
+[node name="Money" type="Node" parent="Components" unique_id=1229509643]
+script = ExtResource("3_lvxji")
+config = ExtResource("6_75vfm")
+
+[node name="Interactions" type="Node" parent="Components" unique_id=1292390735]
+script = ExtResource("7_qehiu")
+metadata/_custom_type_script = "uid://hbolmrqk40ht"

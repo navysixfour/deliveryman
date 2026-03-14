@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b2yk7xmq4n3wp"]
 
-[ext_resource type="PackedScene" uid="uid://b8ufnmhb0uwpq" path="res://scenes/player/player.tscn" id="1_hyk8p"]
+[ext_resource type="PackedScene" uid="uid://b8ufnmhb0uwpq" path="res://scenes/character/player_character.tscn" id="1_hyk8p"]
 [ext_resource type="Script" uid="uid://ctdbh8ftchkq4" path="res://scripts/ui/ui_container.gd" id="1_iuonh"]
 [ext_resource type="Script" uid="uid://g0lfgnyjpi86" path="res://scripts/scene.gd" id="1_k2fmo"]
 
@@ -33,7 +33,9 @@ transform = Transform3D(3.0508018, 0, 0, 0, 1, 0, 0, 0, 3.1186671, 0.1387236, -0
 use_collision = true
 size = Vector3(5, 1, 5)
 
-[node name="PlayerContainer" parent="." unique_id=532408100 instance=ExtResource("1_hyk8p")]
+[node name="PlayerContainer" type="Node" parent="." unique_id=915802824]
+
+[node name="PlayerCharacter" parent="PlayerContainer" unique_id=532408100 instance=ExtResource("1_hyk8p")]
 transform = Transform3D(0.9993644, 0, -0.035649523, 0, 1, 0, 0.035649523, 0, 0.9993644, 0, 2.565724, 0)
 
 [node name="UIContainer" type="Node" parent="." unique_id=36772347]

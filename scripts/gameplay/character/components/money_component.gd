@@ -1,6 +1,6 @@
-extends PlayerSystem
+extends CharacterComponent
 
-class_name MoneyPlayerSystem
+class_name MoneyComponent
 
 @export var config: MoneyConfig
 signal money_changed(new_amount: int, delta: int)
@@ -8,7 +8,6 @@ signal money_changed(new_amount: int, delta: int)
 
 func _ready() -> void:
 	super._ready()
-	PlayerSystems.money = self
 
 	Documents.player.money = config.starting_money
 

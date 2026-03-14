@@ -1,6 +1,6 @@
-extends PlayerSystem
+extends CharacterComponent
 
-class_name MovementPlayerSystem
+class_name MovementComponent
 
 @export var move_speed: float = 5.0
 @export var sprint_speed: float = 8.0
@@ -20,7 +20,6 @@ var _jump_requested: bool = false
 
 func _ready() -> void:
 	super._ready()
-	PlayerSystems.movement = self
 
 
 func cancel_input() -> void:
