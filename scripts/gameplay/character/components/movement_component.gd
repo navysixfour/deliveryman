@@ -18,10 +18,6 @@ var _is_sprinting: bool = false
 var _jump_requested: bool = false
 
 
-func _ready() -> void:
-	super._ready()
-
-
 func cancel_input() -> void:
 	_input_dir = Vector2.ZERO
 	_is_sprinting = false

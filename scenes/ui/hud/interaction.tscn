@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://isxlmjrdmfxg"]
+
+[ext_resource type="Script" uid="uid://1uwumach2n8b" path="res://scripts/ui/context/hud/interaction_ui_context.gd" id="1_ctx"]
+[ext_resource type="Script" uid="uid://vgf2ubno3dwr" path="res://scripts/ui/view/interaction_view.gd" id="2_view"]
+
+[node name="InteractionUICtx" type="Control" unique_id=501223233]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_ctx")
+
+[node name="InteractionView" type="CenterContainer" parent="." unique_id=539857934 node_paths=PackedStringArray("label", "icon")]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -80.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+script = ExtResource("2_view")
+label = NodePath("HBoxContainer/Label")
+icon = NodePath("HBoxContainer/Icon")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="InteractionView" unique_id=1956641134]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Icon" type="TextureRect" parent="InteractionView/HBoxContainer" unique_id=1746766172]
+visible = false
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="InteractionView/HBoxContainer" unique_id=1535333212]
+layout_mode = 2
+text = "Test"

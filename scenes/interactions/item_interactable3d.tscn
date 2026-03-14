@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bek0thbeblnay"]
+
+[ext_resource type="Script" uid="uid://6udy5s66qp87" path="res://scripts/gameplay/interaction/item_interactable3d.gd" id="1_kimk7"]
+[ext_resource type="Resource" path="res://configs/gameplay/player/components/inventory/items/egg.tres" id="2_h0vin"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_h0vin"]
+radius = 1.25
+
+[node name="ItemInteractable3D" type="Area3D" unique_id=1549861212 node_paths=PackedStringArray("collision_shape")]
+script = ExtResource("1_kimk7")
+item = ExtResource("2_h0vin")
+collision_shape = NodePath("CollisionShape3D")
+interaction_radius = 1.25
+metadata/_custom_type_script = "uid://6udy5s66qp87"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=534006543]
+shape = SubResource("SphereShape3D_h0vin")

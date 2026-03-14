@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c8ee5wykaklsx" path="res://scripts/ui/context/hud/hud_ui_context.gd" id="1_qao66"]
 [ext_resource type="PackedScene" uid="uid://c30yxnblxu053" path="res://scenes/ui/hud/money.tscn" id="1_xmswo"]
+[ext_resource type="PackedScene" uid="uid://isxlmjrdmfxg" path="res://scenes/ui/hud/interaction.tscn" id="2_inter"]
 
 [node name="HudUICtx" type="Control" unique_id=2134910795]
 layout_mode = 3
@@ -23,3 +24,5 @@ grow_horizontal = 0
 
 [node name="SceneMoney" parent="CanvasLayer/HBoxContainer" unique_id=323868344 instance=ExtResource("1_xmswo")]
 layout_mode = 2
+
+[node name="InteractionUICtx" parent="CanvasLayer" unique_id=170232518 instance=ExtResource("2_inter")]

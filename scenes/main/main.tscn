@@ -3,6 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://b8ufnmhb0uwpq" path="res://scenes/character/player_character.tscn" id="1_hyk8p"]
 [ext_resource type="Script" uid="uid://ctdbh8ftchkq4" path="res://scripts/ui/ui_container.gd" id="1_iuonh"]
 [ext_resource type="Script" uid="uid://g0lfgnyjpi86" path="res://scripts/scene.gd" id="1_k2fmo"]
+[ext_resource type="PackedScene" path="res://scenes/interactables/collectible_box.tscn" id="4_cbox"]
+[ext_resource type="PackedScene" path="res://scenes/interactables/collectible_sphere.tscn" id="5_csph"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sky"]
 sky_horizon_color = Color(0.646, 0.662, 0.675, 1)
@@ -37,6 +39,12 @@ size = Vector3(5, 1, 5)
 
 [node name="PlayerCharacter" parent="PlayerContainer" unique_id=532408100 instance=ExtResource("1_hyk8p")]
 transform = Transform3D(0.9993644, 0, -0.035649523, 0, 1, 0, 0.035649523, 0, 0.9993644, 0, 2.565724, 0)
+
+[node name="CollectibleBox" parent="LevelContainer" instance=ExtResource("4_cbox")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.55, -2)
+
+[node name="CollectibleSphere" parent="LevelContainer" instance=ExtResource("5_csph")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.55, -2)
 
 [node name="UIContainer" type="Node" parent="." unique_id=36772347]
 script = ExtResource("1_iuonh")

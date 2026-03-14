@@ -46,6 +46,7 @@ config = ExtResource("4_p47bc")
 script = ExtResource("3_lvxji")
 config = ExtResource("6_75vfm")
 
-[node name="Interactions" type="Node" parent="Components" unique_id=1292390735]
+[node name="Interactions" type="Node" parent="Components" unique_id=1292390735 node_paths=PackedStringArray("camera")]
 script = ExtResource("7_qehiu")
+camera = NodePath("../../Head/Camera3D")
 metadata/_custom_type_script = "uid://hbolmrqk40ht"
