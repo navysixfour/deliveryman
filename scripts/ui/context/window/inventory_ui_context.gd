@@ -4,6 +4,8 @@ var view: InventoryView
 
 
 func _on_enter_context(view: Node) -> void:
+	super._on_enter_context(view)
+
 	self.view = view as InventoryView
 
 	view.build_grid(World.get_player().inventory.capacity)
@@ -16,6 +18,8 @@ func _on_enter_context(view: Node) -> void:
 func _on_leave_context() -> void:
 	World.get_player().inventory.item_added.disconnect(_on_inventory_changed)
 	World.get_player().inventory.item_removed.disconnect(_on_inventory_changed)
+
+	super._on_leave_context()
 
 
 func _on_inventory_changed(_item: InventoryItem, _count: int) -> void:

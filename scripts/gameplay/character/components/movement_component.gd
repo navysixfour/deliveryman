@@ -18,34 +18,23 @@ var _is_sprinting: bool = false
 var _jump_requested: bool = false
 
 
-func cancel_input() -> void:
-	_input_dir = Vector2.ZERO
-	_is_sprinting = false
-	_jump_requested = false
+func set_input_dir(dir: Vector2) -> void:
+	_input_dir = dir
 
 
-func _unhandled_input(event: InputEvent) -> void:
-	if event is InputEventMouseMotion:
-		player.rotate_y(-event.relative.x * mouse_sensitivity)
+func set_is_sprinting(is_sprinting: bool) -> void:
+	_is_sprinting = is_sprinting
 
-		_head_pitch -= event.relative.y * mouse_sensitivity
-		_head_pitch = clamp(_head_pitch, -deg_to_rad(max_pitch), deg_to_rad(max_pitch))
-		head.rotation = Vector3(_head_pitch, 0.0, 0.0)
 
-	if event.is_action("move_left") or event.is_action("move_right") \
-	or event.is_action("move_forward") or event.is_action("move_back"):
-		_input_dir = Input.get_vector(
-			"move_left",
-			"move_right",
-			"move_forward",
-			"move_back",
-		)
+func set_jump_requested(jump_requested: bool) -> void:
+	_jump_requested = jump_requested
 
-	if event.is_action("sprint"):
-		_is_sprinting = event.is_pressed()
 
-	if event.is_action_pressed("jump"):
-		_jump_requested = true
+func set_head_dir(head_dir: Vector2) -> void:
+	player.rotate_y(-head_dir.x * mouse_sensitivity)
+	_head_pitch -= head_dir.y * mouse_sensitivity
+	_head_pitch = clamp(_head_pitch, -deg_to_rad(max_pitch), deg_to_rad(max_pitch))
+	head.rotation = Vector3(_head_pitch, 0.0, 0.0)
 
 
 func _physics_process(delta: float) -> void:

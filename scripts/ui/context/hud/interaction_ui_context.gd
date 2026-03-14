@@ -4,6 +4,8 @@ var view: InteractionView
 
 
 func _on_enter_context(v: Node) -> void:
+	super._on_enter_context(view)
+
 	view = v as InteractionView
 
 	var interactions := World.get_player().interactions
@@ -25,6 +27,8 @@ func _try_handle_input(event: InputEvent) -> bool:
 func _on_leave_context() -> void:
 	var interactions := World.get_player().interactions
 	interactions.target_changed.disconnect(_on_target_changed)
+
+	super._on_leave_context()
 
 
 func _on_target_changed(target: Interactable3D) -> void:
